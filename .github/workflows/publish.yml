@@ -1,0 +1,31 @@
+name: Publish Docker image
+
+
+on:
+    push:
+        branches:
+            - main
+
+
+jobs:
+    build:
+        runs-on: ubunto-latest
+
+        steps: 
+            - name: Chckout repository
+              uses: actions/checkout@v3
+
+            - name: set up .net
+              uses: actions/setup-dotnet@v3
+              with:
+                dotnet-versions: '9.0'
+
+
+            - name: restore and build
+              run: |
+                dotnet restore
+                dotnet build
+
+
+            - name: build docker image
+              run: docker build -t Sebus/docker-intro
