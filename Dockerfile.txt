@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY .bon/Debug/net9.0/ .
 
-CMD ["dotnet", "docker-intro.dll"]
+CMD ["dotnet", "docker-intro-2.dll"]
