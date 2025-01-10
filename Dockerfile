@@ -2,6 +2,6 @@
 
 WORKDIR /app
 
-COPY .bon/Debug/net9.0/ .
+COPY .bin/Debug/net9.0/ .
 
 CMD ["dotnet", "docker-intro-2.dll"]
