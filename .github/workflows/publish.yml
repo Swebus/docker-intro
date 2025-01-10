@@ -24,8 +24,9 @@ jobs:
             - name: restore and build
               run: |
                 dotnet restore
+                echo '-----------------------------------'
                 dotnet build
 
 
             - name: build docker image
-              run: docker build -t Sebus/docker-intro
+              run: docker build -t Sebus/docker-intro-2
